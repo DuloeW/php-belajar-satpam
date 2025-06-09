@@ -76,6 +76,7 @@ if (!$user_data) {
                                     <input type="text" 
                                            id="nama_depan"
                                            name="nama_depan" 
+                                           maxlength="30"
                                            value="<?= htmlspecialchars($user_data['nama_depan']) ?>"
                                            class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                            required>
@@ -86,6 +87,7 @@ if (!$user_data) {
                                     <input type="text" 
                                            id="nama_belakang"
                                            name="nama_belakang" 
+                                           maxlength="30"
                                            value="<?= htmlspecialchars($user_data['nama_belakang']) ?>"
                                            class="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                                            required>

@@ -12,5 +12,9 @@
             <span class="text-gray-500 text-sm">Tanggal:</span>
             <span class="text-gray-700 font-medium text-sm"><?php echo htmlspecialchars($tgl); ?></span>
         </div>
+        <div class="flex justify-between items-center">
+            <span class="text-gray-500 text-sm">Foto:</span>
+            <a href="uploads/<?php echo htmlspecialchars($foto_bukti); ?>" target="_blank" class="text-blue-700 font-medium text-sm">Lihat</a>
+        </div>
     </div>
 </div>

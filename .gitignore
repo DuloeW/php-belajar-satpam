@@ -3,6 +3,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .env
+assets/input.css
+assets/output.css
 uploads/*
 # Image files
 *.jpg

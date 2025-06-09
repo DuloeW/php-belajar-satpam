@@ -12,23 +12,30 @@
     <p class="text-center mt-2 tracking-wider text-lg">Apakah Kunci Anda Hilang Di Motor?</p>
     
     <!-- Search Form -->
-    <div class="flex justify-center items-center mt-8">
-        <form method="GET" action="" class="flex w-full max-w-md gap-2">
-            <input class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                   type="search"
-                   name="search"
-                   id="search"
-                   value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>"
-                   placeholder="Nomor Polisi Motor Anda">
-            <button type="submit" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200">
-                Cari
-            </button>
-            <?php if(isset($_GET['search']) && !empty($_GET['search'])): ?>
-                <a href="?" class="px-4 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200">
-                    Reset
-                </a>
-            <?php endif; ?>
-        </form>
+    <div class="flex justify-center items-center mt-8 px-4">
+        <div class="w-full max-w-2xl">
+            <form method="GET" action="" class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                <input class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm sm:text-base"
+                       type="text"
+                       name="search"
+                       id="search"
+                       maxlength="10"
+                       value="<?php echo isset($_GET['search']) ? htmlspecialchars($_GET['search']) : ''; ?>"
+                       placeholder="Nomor Polisi Motor Anda">
+                
+                <div class="flex gap-2 sm:gap-3">
+                    <button type="submit" class="flex-1 sm:flex-none px-4 sm:px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm sm:text-base font-medium">
+                        Cari
+                    </button>
+                    
+                    <?php if(isset($_GET['search']) && !empty($_GET['search'])): ?>
+                        <a href="?" class="flex-1 sm:flex-none px-4 sm:px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors duration-200 text-sm sm:text-base font-medium text-center">
+                            Reset
+                        </a>
+                    <?php endif; ?>
+                </div>
+            </form>
+        </div>
     </div>
 
     <!-- Search Results Info -->

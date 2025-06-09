@@ -3,3 +3,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .env
+uploads/*
+# Image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp

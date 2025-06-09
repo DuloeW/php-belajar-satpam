@@ -38,6 +38,12 @@
                     maxlength="8"
                     placeholder="Password">
             </div>
+            <div>
+                <input class="w-full mb-2 p-2 border border-gray-300 rounded" 
+                    type="text" 
+                    name="register_key"
+                    placeholder="Security Key">
+            </div>
             <div class="flex justify-center mt-2">
                 <button type="submit"
                     class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition-colors duration-200"

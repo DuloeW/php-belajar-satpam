@@ -4,6 +4,8 @@ ini_set('display_errors', 1);
 
 include '../auth/koneksi.php';
 
+$env = parse_ini_file(__DIR__ . '/../.env');
+
 function generateRandomIdInt() {
     return rand(100000, 999999);
 }
@@ -15,6 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = hashPassword($_POST['password']);
     $id_admin = generateRandomIdInt();
+    $register_key = $_POST['register_key'];
+
+    if($register_key !== $env['KEY_REGISTER']) {
+        echo "<script>alert('Security key tidak valid!'); window.location.href = '../pages/register-view.php';</script>";
+        exit();
+    }
 
     if(isEmailRegistered($email)) {
         echo "<script>alert('Email sudah terdaftar!'); window.location.href = '../pages/register-view.php';</script>";

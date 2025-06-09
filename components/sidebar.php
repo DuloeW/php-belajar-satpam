@@ -9,17 +9,20 @@
         <a href="../pages/tambah-catatan-view.php" class="flex items-center px-4 py-2 rounded hover:bg-gray-700 transition">
             Buat Catatan
         </a>
-        <a href="#" class="flex items-center px-4 py-2 rounded hover:bg-gray-700 transition">
+        <!-- <a href="#" class="flex items-center px-4 py-2 rounded hover:bg-gray-700 transition">
             Laporan
-        </a>
-        <a href="#" class="flex items-center px-4 py-2 rounded hover:bg-gray-700 transition">
+        </a> -->
+        <a href="../pages/profile-view.php" class="flex items-center px-4 py-2 rounded hover:bg-gray-700 transition">
             Profil
         </a>
     </nav>
     <div class="p-4 border-t border-gray-700">
-        <button class="w-full flex items-center justify-center px-4 py-2 bg-red-600 rounded hover:bg-red-700 transition">
-            Logout
-        </button>
+        <form action="../handlers/logout_handler.php" method="POST">
+            <button onclick="return confirm('Yakin ingin keluar?')"
+                class="w-full flex items-center justify-center px-4 py-2 bg-red-600 rounded hover:bg-red-700 transition">
+                Logout
+            </button>
+        </form>
     </div>
 </div>
 <!-- Mobile menu button -->

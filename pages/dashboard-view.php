@@ -2,8 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 session_start();
-if (!isset($_SESSION['usernmae'])) {
-    header('Location: ./pages/login-view.php');
+if (!isset($_SESSION['username'])) {
+    header('Location: ../pages/login-view.php');
     exit();
 }
 
@@ -80,7 +80,7 @@ if (!isset($_SESSION['usernmae'])) {
                                 <a href="edit-catatan-view.php?id=<?= $row['id_pencatatan'] ?>" class="flex-1 text-center px-3 py-2 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors text-xs font-medium">
                                     Edit
                                 </a>
-                                <a href="delete.php?id=<?= $row['id_pencatatan'] ?>" class="flex-1 text-center px-3 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition-colors text-xs font-medium" onclick="return confirm('Yakin hapus data ini?')">
+                                <a href="../handlers/hapus_catatan_handler.php?id=<?= $row['id_pencatatan'] ?>" class="flex-1 text-center px-3 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition-colors text-xs font-medium" onclick="return confirm('Yakin hapus data ini?')">
                                     Hapus
                                 </a>
                             </div>
@@ -125,7 +125,7 @@ if (!isset($_SESSION['usernmae'])) {
                                     <a href="edit-catatan-view.php?id=<?= $row['id_pencatatan'] ?>" class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-700 rounded-lg hover:bg-blue-200 transition-colors text-xs font-medium">
                                         Edit
                                     </a>
-                                    <a href="delete.php?id=<?= $row['id_pencatatan'] ?>" class="inline-flex items-center px-3 py-1 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition-colors text-xs font-medium" onclick="return confirm('Yakin hapus data ini?')">
+                                    <a href="../handlers/hapus_catatan_handler.php?id=<?= $row['id_pencatatan'] ?>" class="inline-flex items-center px-3 py-1 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition-colors text-xs font-medium" onclick="return confirm('Yakin hapus data ini?')">
                                         Hapus
                                     </a>
                                 </td>

@@ -45,11 +45,15 @@ if (!isset($_SESSION['username'])) {
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Nama Mahasiswa</label>
-                        <input type="text" name="nama_mhs" value="<?= htmlspecialchars($data['nama_mhs']) ?>" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
+                        <input type="text" name="nama_mhs" maxlength="60" value="<?= htmlspecialchars($data['nama_mhs']) ?>" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Nomer HP</label>
-                        <input type="text" name="no_telp_mhs" value="<?= htmlspecialchars($data['no_telp_mhs']) ?>" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
+                        <input 
+                            type="text" 
+                            name="no_telp_mhs" 
+                            maxlength="12"
+                            value="<?= htmlspecialchars($data['no_telp_mhs']) ?>" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal</label>
@@ -68,15 +72,15 @@ if (!isset($_SESSION['username'])) {
                 <div class="space-y-4">
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Lokasi</label>
-                        <input type="text" name="tempat_ditemukan" value="<?= htmlspecialchars($data['tempat_ditemukan']) ?>" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
+                        <input type="text" name="tempat_ditemukan" maxlength="60" value="<?= htmlspecialchars($data['tempat_ditemukan']) ?>" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Jenis Kendaraan</label>
-                        <input type="text" name="jenis_kendaraan" value="<?= htmlspecialchars($data['jenis_kendaraan']) ?>" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
+                        <input type="text" maxlength="60" name="jenis_kendaraan" value="<?= htmlspecialchars($data['jenis_kendaraan']) ?>" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Nomer Plat</label>
-                        <input type="text" name="nomer_plat" value="<?= htmlspecialchars($data['nomer_plat']) ?>" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
+                        <input type="text" maxlength="10" name="nomer_plat" value="<?= htmlspecialchars($data['nomer_plat']) ?>" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
                     </div>
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-1">Foto Saat Ini</label>

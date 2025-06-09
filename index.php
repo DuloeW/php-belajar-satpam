@@ -70,6 +70,7 @@
                 $jenis_kendaraan = $row['jenis_kendaraan'];
                 $lokasi = $row['tempat_ditemukan'];
                 $tgl = $row['tgl_pencatatan'];
+                $foto_bukti = $row['foto_bukti'];
                 include './components/card.php';
             }
         } else {

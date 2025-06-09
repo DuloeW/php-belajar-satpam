@@ -1,6 +1,6 @@
 <div class="min-h-screen flex flex-col bg-gray-800 text-white w-64 fixed md:relative z-30">
     <div class="flex items-center justify-center h-16 bg-gray-900">
-        <span class="text-xl font-bold">Sidebar</span>
+        <span class="text-xl font-bold">Pencatatan Kehilangan</span>
     </div>
     <nav class="flex-1 px-2 py-4 space-y-2">
         <a href="../pages/dashboard-view.php" class="flex items-center px-4 py-2 rounded hover:bg-gray-700 transition">

@@ -29,31 +29,31 @@ if (!isset($_SESSION['username'])) {
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <div class="mb-4 sm:mb-6">
                         <label for="nama_mhs" class="block mb-2 font-semibold text-gray-700">Nama Mahasiswa:</label>
-                        <input type="text" id="nama_mhs" name="nama_mhs" required 
+                        <input type="text" id="nama_mhs" name="nama_mhs" maxlength="60" required 
                                class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
                     </div>
 
                     <div class="mb-4 sm:mb-6">
                         <label for="no_telp_mhs" class="block mb-2 font-semibold text-gray-700">No. Telepon:</label>
-                        <input type="tel" id="no_telp_mhs" name="no_telp_mhs" required 
+                        <input type="tel" id="no_telp_mhs" name="no_telp_mhs" maxlength="12" required 
                                class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
                     </div>
 
                     <div class="mb-4 sm:mb-6">
                         <label for="tempat_ditemukan" class="block mb-2 font-semibold text-gray-700">Tempat Ditemukan:</label>
-                        <input type="text" id="tempat_ditemukan" name="tempat_ditemukan" required 
+                        <input type="text" id="tempat_ditemukan" name="tempat_ditemukan" maxlength="60" required 
                                class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
                     </div>
 
                     <div class="mb-4 sm:mb-6">
                         <label for="jenis_kendaraan" class="block mb-2 font-semibold text-gray-700">Jenis Kendaraan:</label>
-                        <input type="text" id="jenis_kendaraan" name="jenis_kendaraan" placeholder="Contoh: Honda Vario, Yamaha NMAX, dll" required 
+                        <input type="text" id="jenis_kendaraan" maxlength="60" name="jenis_kendaraan" placeholder="Contoh: Honda Vario, Yamaha NMAX, dll" required 
                                class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
                     </div>
 
                     <div class="mb-4 sm:mb-6">
                         <label for="nomer_plat" class="block mb-2 font-semibold text-gray-700">Nomor Plat:</label>
-                        <input type="text" id="nomer_plat" name="nomer_plat" required 
+                        <input type="text" id="nomer_plat" maxlength="10" name="nomer_plat" required 
                                class="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
                     </div>
 
@@ -76,7 +76,7 @@ if (!isset($_SESSION['username'])) {
                         Simpan Catatan
                     </button>
                     <button type="reset" 
-                            class="w-full sm:w-auto bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 sm:px-8 rounded-md transition duration-200 text-sm sm:text-base">
+                            class="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-medium py-3 px-6 sm:px-8 rounded-md transition duration-200 text-sm sm:text-base">
                         Reset
                     </button>
                 </div>

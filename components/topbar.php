@@ -50,7 +50,7 @@
                 <a href="#" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10 transition-colors duration-200">
                     Laporan
                 </a> -->
-                <a href="pages/login-view.php" class="block px-3 py-2 rounded-md text-base font-medium bg-red-500 hover:bg-red-600 transition-colors duration-200 mt-2">
+                <a href="pages/login-view.php" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-blue-500 hover:bg-blue-600 transition-colors duration-200 mt-2">
                     Login
                 </a>
             </div>

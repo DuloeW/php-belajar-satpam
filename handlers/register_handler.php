@@ -13,8 +13,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nama_depan = $_POST['nama_depan'];
     $nama_belakang = $_POST['nama_belakang'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = hashPassword($_POST['password']);
     $id_admin = generateRandomIdInt();
+
+    if(isEmailRegistered($email)) {
+        echo "<script>alert('Email sudah terdaftar!'); window.location.href = '../pages/register-view.php';</script>";
+        exit();
+    }
 
     mysqli_query($koneksi, "INSERT INTO admin (id_admin, nama_depan, nama_belakang, email, password) VALUES ('$id_admin', '$nama_depan', '$nama_belakang', '$email', '$password')");
 
@@ -23,4 +28,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         echo "<script>alert('Registrasi gagal!'); window.location.href = '../pages/register-view.php';</script>";
     }
+}
+
+function isEmailRegistered($email) {
+    global $koneksi;
+    $query = mysqli_query($koneksi, "SELECT * FROM admin WHERE email = '$email'");
+    return mysqli_num_rows($query) > 0;
+}
+
+
+function hashPassword($password) {
+    return password_hash($password, PASSWORD_DEFAULT);
 }
